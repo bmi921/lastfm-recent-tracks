@@ -16,3 +16,5 @@ username
 `
 にlastfmで使用しているユーザー名を入れてください。
 
+
+![{78759840-641A-4E7D-AA01-E63FDE1E239B}](https://github.com/user-attachments/assets/e1b1b182-0d83-4c53-b5cd-e60638887d45)
