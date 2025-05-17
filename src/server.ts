@@ -94,6 +94,7 @@ app.get("/api/:username", async (req, res) => {
       </html>
     `);
   } catch (error) {
+    console.log(error);
     res.status(500).send(`
       <div>
         Failed to load recent tracks. Please try again later.
