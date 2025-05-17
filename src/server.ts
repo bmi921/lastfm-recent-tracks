@@ -24,6 +24,8 @@ app.get("/api/:username", async (req, res) => {
     const { username } = req.params;
     const { limit = "10" } = req.query;
 
+    console.log("fetch data from lastfm: ", username, LASTFM_API_KEY);
+
     const response = await axios.get("https://ws.audioscrobbler.com/2.0/", {
       params: {
         method: "user.getrecenttracks",
