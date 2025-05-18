@@ -19,6 +19,9 @@ type track = {
   date: any;
 };
 
+const DEFAULT_ALBUM_COVER =
+  "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+
 app.get("/api/:username", async (req, res) => {
   try {
     const { username } = req.params;
@@ -40,12 +43,15 @@ app.get("/api/:username", async (req, res) => {
       artist: track.artist["#text"],
       name: track.name,
       album: track.album?.["#text"],
-      image: track.image.find(
-        (img: { size: string }) => img.size === "extralarge"
-      )?.["#text"],
+      image:
+        track.image.find(
+          (img: { size: string }) => img.size === "extralarge"
+        )?.["#text"] || DEFAULT_ALBUM_COVER,
       url: track.url,
       date: track.date?.["#text"],
     }));
+
+    console.log(tracks);
 
     res.send(`
 <!DOCTYPE html>
