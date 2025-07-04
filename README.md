@@ -2,14 +2,14 @@
 
 ```
 <iframe
-          src="https://lastfm-recent-tracks-production.up.railway.app/api/<username>"
+          src="https://<your-application-domain>/api/<username>"
           className="w-[390px] h-[800px]"
           title="Recently Played Tracks"
           sandbox="allow-same-origin allow-scripts"
 />
 ```
-上記のiframeによってlastfmで直近にきいた10曲を表示できます。 
-個人で使う場合は自分でlastfmのAPIキー、名前を設定してください。
+上記のリンクからiframeでlastfmで直近にきいた10曲を埋め込めます。 
+個人で使う場合は自分でデプロイし、lastfmのAPIキー、名前を設定してください。
 
 
 `
